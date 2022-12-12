@@ -2,12 +2,12 @@
 
 namespace CircularQueues
 {
-    class program
+    class Program
     {
         int FRONT, REAR, max = 5;
         int[] queue_array = new int[5];
 
-        public program()
+        public Program()
         {
             //initializing the values of the variables REAR and FRONT to -1 to indicate that the queue is in initially empty
             FRONT = -1;
@@ -116,7 +116,7 @@ namespace CircularQueues
 
         static void main(string[] args)
         {
-            program queue = new program();
+            Program queue = new Program();
             char ch;
             while (true)
             {
@@ -128,7 +128,41 @@ namespace CircularQueues
                     Console.WriteLine("3. Display Values");
                     Console.WriteLine("4. EXIT ");
                     Console.Write("\nEnter your choice (1-4): ");
-                    
+                    ch = Convert.ToChar(Console.Read());
+                    Console.WriteLine();
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                Console.Write("Enter a number:  ");
+                                int num = Convert.ToInt32(System.Console.ReadLine());
+                                Console.WriteLine();
+                                queue.insert(num);
+                            }
+                            break;
+
+                        case '2':
+                            {
+                                queue.remove();
+                            }
+                            break;
+                        case '3':
+                            {
+                                queue.display();
+                            }
+                            break;
+                        case '4':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("invlaid option !!");
+                            }
+                            break;
+                    }  
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Check for the values entered. ");
                 }
             }
         }
