@@ -116,7 +116,21 @@ namespace CircularQueues
 
         static void main(string[] args)
         {
-
+            program queue = new program();
+            char ch;
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("MENU");
+                    Console.WriteLine("1. implement insert operation");
+                    Console.WriteLine("2. Implement Delete Operation");
+                    Console.WriteLine("3. Display Values");
+                    Console.WriteLine("4. EXIT ");
+                    Console.Write("\nEnter your choice (1-4): ");
+                    
+                }
+            }
         }
     }
 }
